@@ -1,16 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { ContentCard } from './ContentCard'
+import '../../styles/content.css'
 
-export const Content = ({ items, title }) => {
+export const Content = ({ items }) => {
   return (
     <>
       <section className='main'>
         <div className='container'>
-          <div className='heading flexSB'>
-            <h1>{title}</h1>
-            <Link to='/'>View all</Link>
-          </div>
           <div className='content'>
             {items.map((item) => (
                 <Link key={item.id} to={`/${item.id}`}>

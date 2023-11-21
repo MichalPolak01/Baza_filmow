@@ -10,7 +10,7 @@ export const ContentCard = ({item: {id, name, rating, description, actors, direc
         </div>          
         <div className='icon'>
             <img src={img} alt="" />
-          </div>
+        </div>
         <div className='text'>
           <h3>{name}</h3>
           <h4>Średnia ocen: {rating}/10</h4>

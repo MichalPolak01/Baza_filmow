@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer>
-            <div className="container">
+            <div className="container flexSB">
                 <div className="box">
-                    <ul className="flex">
+                    <ul >
                         <li>&copy; 2023 Michał Polak</li>
                         <li>Numer indeksu: 35229</li>
                         <li>Żródło danych:

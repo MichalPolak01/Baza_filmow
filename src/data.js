@@ -37,6 +37,18 @@ export const movies = [
         background: './images/backgrounds/siw10.jpg',
         date: '19.05.2023',
         publicationDate: '19.11.2023'
+    },
+    {
+        id: 4,
+        name: 'Ojciec Chrzestny',
+        rating: '8.7',
+        description: "Akcja filmu toczy się pod koniec II wojny światowej w Ameryce. Don Vito Corleone jest głową jednej z pięciu mafijnych rodzin w Nowym Jorku. Wraz z pomocą synów Sonny'ego i Freda oraz Toma Hagena -który oferuje swoje usługi w zakresie prawnym - cieszą się uznaniem wśród wielu znanych i ważnych osobistości. Wszystko zaczyna się komplikować, gdy Don Vito odmawia współpracy w handlu narkotykami.",
+        actors: 'Marlon Brando, Al Pacino, James Caan',
+        director: 'Francis Ford Coppola',
+        generies: 'Dramat, Kryminał',
+        img: './images/icons/OjciecChrzestny.jpg',
+        background: './images/backgrounds/OjciecChrzestny.jpg',
+        date: '24.03.1972',
+        publicationDate: '19.11.2023'
     }
-
 ]

@@ -1,6 +1,6 @@
 header {
     height: 10vh;
-    line-height: 10vh;
+    line-height: 7vh;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
     color: #fff;
     position: relative;
@@ -8,7 +8,7 @@ header {
 }
 
 .logo img {
-    height: 50px;
+    height: 6vh;
     margin-top: 20px;
     margin-right: 30px;
 }
@@ -16,23 +16,58 @@ header {
 header a {
     color: #fff;
     margin-left: 30px;
+    font-size: 2.5vh;
+    font-weight: 500;
+    padding: 0 5px;
+    transition: 1s;
+}
+
+
+header ul a:hover {
+    color: red;
 }
 
 header i {
-  quotes: 40px;
-  height: 40px;
+  height: 5vh;
+  width: 5vh;
   padding: 10px;
   text-align: center;
   border-radius: 50%;
   border: 2px solid #fff;
   margin: 0 10px;
+  transition: 1s;
 }
 
-header button {
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: bold;
+header i:hover {
+    color: rgba(255, 0, 0, 0.7);
+    transform: scale(1.1) rotate(45deg);
+    box-shadow: 0.3vh 0.3vh 0.3vh 0.3vh rgba(255, 0, 0, 0.4);
 }
+
+header form input {
+    margin: 0;
+    padding: 0;
+    width: 40vh;
+    height: 40px;
+    padding-left: 2vh;
+    border-radius: 20px;
+}
+
+header form input a {
+    padding-left: 10px;
+}
+
+form div {
+    padding: 0;
+    margin: 0;
+}
+
+.results {
+    top: 10vh;
+    width: 40vh;
+    display: flex;
+    flex-direction: column;
+  }
 
 .toggle {
     display: none;
@@ -53,7 +88,7 @@ header button {
         position: absolute;
         top: 0;
         left: 0;
-        background-color: aqua;
+        background-color: red;
         width: 50%;
         height: 100vh;
         z-index: 999;
@@ -79,9 +114,36 @@ header button {
         background: none;
 
     }
-
-    .active {
-        color: red;
-    }
 }
 
+.active {
+    color: red;
+    text-decoration: underline;
+}
+
+.results a {
+    margin: 0;
+    padding: 0;
+}
+
+form .movie {
+    background-color: #323232;
+    border: 2px solid burlywood;
+    padding: 1.5vh;
+    border-radius: 10px;
+    width: 40vh;
+    height: 11vh;
+    display: flex;
+    flex-direction: row;
+    line-height: 7vh;
+}
+
+form .icon img {
+    border: burlywood 2px solid;
+    border-radius: 2vh;
+    height: 8vh;
+}
+
+form .title {
+    padding-left: 2vh;
+}

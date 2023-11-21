@@ -1,26 +1,15 @@
 footer {
     background-color: #191919;
-    margin-top: 100px;
-    padding: 50px 0;
+    padding: 40px 5%;
     clear: both;
 }
 
 footer .container {
-    /* display: grid;
-    grid-template-columns: 6fr, 2fr, 2fr; */
-    /* grid-gap: 30px; */
     color: white;
 }
 
-footer ul {
-    margin-bottom: 30px;
-}
-
-footer ul li {
-    margin-right: 30px;
-}
-
 footer i {
+    color: #fff;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -28,7 +17,28 @@ footer i {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     margin-right: 20px;
-    margin-top: 50px;
+    margin-top: 15px;
+    transition: 1s;
+}
+
+footer i:hover {
+    color: rgba(255, 0, 0, 0.7);
+    transform: scale(1.1) rotate(45deg);
+    box-shadow: 0.5vh 0.5vh 0.5vh 0.5vh rgba(255, 0, 0, 0.4);
+}
+
+footer h3 {
+    text-align: right;
+    margin-right: 20px;
+}
+
+footer a {
+    color: #fff;
+    transition: 0.5s;
+}
+
+footer a:hover {
+    color: rgba(255, 0, 0, 0.7);
 }
 
 @media only screen and(max-width: 768px) {

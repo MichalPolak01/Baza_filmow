@@ -1,7 +1,7 @@
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import React, { useState } from 'react';
-// import '../styles/styles.css'
 import '../styles/navbar.css'
+import { SearchBar } from './SearchBar';
 
 const Navbar = () => {
     const [Mobile, setMobile] = useState(false)
@@ -10,7 +10,9 @@ const Navbar = () => {
             <div className='container flexSB'>
                 <nav className='flexSB'>
                     <div className='logo'>
-                        <img src='./images/movie-logo.png' alt='logo' />
+                        <Link to='/'>
+                            <img src='./images/movie-logo.png' alt='logo' />
+                        </Link>
                     </div>
                     <ul className={Mobile ? "navMenu-list" : "flexSB"} onClick = {() => setMobile(false)}>
                         <CustomLink to={'/'}>Home</CustomLink>
@@ -22,8 +24,10 @@ const Navbar = () => {
                     </button>
                 </nav>
                 <div className='account flexSB'>
-                    <i className='fa fa-search'></i>
-                    <i className='fa fa-user'></i>
+                    <SearchBar />
+                    <Link to='/Login'>
+                        <i className='fa fa-user'></i>
+                    </Link>
                 </div>
             </div>
         </header>
