@@ -7,7 +7,6 @@ export const Slider = ({item: {id, name, rating, description, actors, director,
         <>
             <div className="coverImage">
                 <img src={background} alt="" />
-                
             </div>
             <div className="texts">
                 <h1>{title}</h1>

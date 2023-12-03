@@ -18,10 +18,10 @@ export const Movie = () => {
         <>
             <section className='singleMovie'>
                 <div className="img">
-                    <img src={item.background} alt="" />
+                    <img src={`../${item.background}`} alt="" />
                 </div>
                 <div className='icon'>
-                    <img src={item.img} alt="" />
+                    <img src={`../${item.img}`} alt="" />
                 </div>
                 <div className='text'>
                     <h1>{item.name}</h1>

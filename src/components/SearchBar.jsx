@@ -49,7 +49,7 @@ export const SearchBar = () => {
                     <div className='absolute results'>
                         {
                             activeSearch.map(movie => (
-                                <Link key={movie.id} to={`/${movie.id}`} onClick={handleResultClick}>
+                                <Link key={movie.id} to={`details/${movie.id}`} onClick={handleResultClick}>
                                     <div className='movie'>
                                         <div className='icon'>
                                             <img src={movie.img} alt="" />
