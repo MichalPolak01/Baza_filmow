@@ -118,6 +118,12 @@
 }
 
 .login .submit {
+    margin: auto;
+    padding: 0;
+    border: none;
+    font: inherit;
+    outline: none;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,3 +165,19 @@
     cursor: pointer;
     transform: scale(1.1);
 }
+
+.alert {
+    position: relative;
+    /* height: 100%; */
+    padding: 0.75rem 1.25rem;
+    /* margin-bottom: 1rem; */
+    border: 1px solid transparent;
+    border-radius: 50px;
+  }
+
+.alert-danger {
+    text-align: center;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  }

@@ -2,9 +2,16 @@ import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import React, { useState } from 'react';
 import '../styles/navbar.css'
 import { SearchBar } from './SearchBar';
+import { isExpired } from "react-jwt";
+
 
 const Navbar = () => {
-    const [Mobile, setMobile] = useState(false)
+    const [Mobile, setMobile] = useState(false);
+
+    const token = localStorage.getItem('token');
+    // const user = token ? decodeToken(token) : null;
+    const isNotLogged = token ? isExpired(token) : true;
+    
     return (
         <header>
             <div className='container flexSB'>
@@ -16,7 +23,7 @@ const Navbar = () => {
                     </div>
                     <ul className={Mobile ? "navMenu-list" : "flexSB"} onClick = {() => setMobile(false)}>
                         <CustomLink to={'/'}>Home</CustomLink>
-                        <CustomLink to={'/movies'}>Filmy</CustomLink>
+                        {/* <CustomLink to={'/movies'}>Filmy</CustomLink> */}
                         <CustomLink to={'/add'}>Dodaj film</CustomLink>
                     </ul>
                     <button className='toggle' onClick = {() => setMobile(!Mobile)}>
@@ -25,9 +32,23 @@ const Navbar = () => {
                 </nav>
                 <div className='account flexSB'>
                     <SearchBar />
-                    <Link to='/signin'>
-                        <i className='fa fa-user'></i>
-                    </Link>
+                    <ul>
+                        {isNotLogged &&
+                            <CustomLink to={'/signin'} className='signin'>
+                                {/* <i className='fa fa-user'></i> */}
+                                <i className="fa-solid fa-user-tie"></i>
+                                    Zaloguj
+                            </CustomLink>
+                        }
+                        {!isNotLogged &&
+                            <li>
+                                <a href='/' className='signin' onClick={() => localStorage.removeItem('token')}>
+                                    <i className="fa-solid fa-user-slash"></i>
+                                    Wyloguj
+                                </a>
+                            </li>
+                        }
+                    </ul>
                 </div>
             </div>
         </header>

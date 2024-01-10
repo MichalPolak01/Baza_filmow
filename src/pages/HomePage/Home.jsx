@@ -4,9 +4,9 @@ import { movies } from '../../data'
 import '../../styles/homes.css'
 
 export const Home = () => {
-    const theMostPopularMovie = movies.reduce((prev, current) =>
-        prev.rating > current.rating ? prev : current
-    );
+    // const theMostPopularMovie = movies.reduce((prev, current) =>
+    //     prev.rating > current.rating ? prev : current
+    // );
 
     const latestMovie = movies.sort((a, b) =>
         new Date(b.date.replace(/(\d{2}).(\d{2}).(\d{4})/, '$3-$2-$1')) - new Date(a.date.replace(/(\d{2}).(\d{2}).(\d{4})/, '$3-$2-$1'))

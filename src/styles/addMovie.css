@@ -107,6 +107,12 @@
 }
 
 .addFilm .submit {
+    margin: auto;
+    padding: 0;
+    border: none;
+    font: inherit;
+    outline: none;
+    
     display: flex;
     justify-content: center;
     align-items: center;

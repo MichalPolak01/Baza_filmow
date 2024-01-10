@@ -11,6 +11,11 @@ header {
     height: 6vh;
     margin-top: 20px;
     margin-right: 30px;
+    transition: 1s;
+}
+
+.logo img:hover {
+    transform: scale(1.1) rotate(-45deg);
 }
 
 header a {
@@ -38,10 +43,14 @@ header i {
   transition: 1s;
 }
 
-header i:hover {
+header .signin:hover i {
     color: rgba(255, 0, 0, 0.7);
     transform: scale(1.1) rotate(45deg);
     box-shadow: 0.3vh 0.3vh 0.3vh 0.3vh rgba(255, 0, 0, 0.4);
+}
+
+header .signin:hover {
+    color: red;
 }
 
 header form input {
