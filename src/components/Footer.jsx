@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="container flexSB">
                 <div className="box">
                     <ul >
-                        <li>&copy; 2023 Michał Polak</li>
+                        <li>&copy; 2024 Michał Polak</li>
                         <li>Numer indeksu: 35229</li>
                         <li>Żródło danych:
                             <Link to="https://www.themoviedb.org/"> https://www.themoviedb.org/</Link>

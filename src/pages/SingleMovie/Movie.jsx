@@ -38,7 +38,6 @@ export const Movie = () => {
       };
 
     useEffect(() => {
-        // sortByRating();
         fetchData();
     }, [id])
 
@@ -52,7 +51,7 @@ export const Movie = () => {
                     <img src={item.image} alt="" />
                 </div>
                 <div className='text'>
-                    <h1>{item.name}</h1>
+                    <h1>{item.title}</h1>
                     <h4>Średnia ocen: {item.rate}/10</h4>
                     <p><span>Opis:</span> <i>{item.content}</i></p>
                     {/* <p><span>Aktorzy:</span> {item.actors}</p> */}

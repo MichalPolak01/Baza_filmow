@@ -135,24 +135,51 @@ form div {
     padding: 0;
 }
 
-form .movie {
+.movie {
     background-color: #323232;
-    border: 2px solid burlywood;
+    /* border: 2px solid burlywood; */
+    border: 2px solid #6f0006;
     padding: 1.5vh;
     border-radius: 10px;
     width: 40vh;
-    height: 11vh;
+    height: 12vh;
     display: flex;
     flex-direction: row;
-    line-height: 7vh;
+    align-items: center;
+    /* line-height: 7vh; */
 }
 
-form .icon img {
+.movie:hover {
+    background: linear-gradient(90deg, #1c1c1c 0%, #363535 50%, #4f4d4d 100%);
+    border-color: red;
+}
+
+.movie:hover span {
+    color: red;
+}
+
+.movie .icon {
+    height: 8vh;
+    width: 5vh;
+    position: relative;
+}
+
+.movie .icon img {
     border: burlywood 2px solid;
     border-radius: 2vh;
-    height: 8vh;
+    /* height: 8vh; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
 }
 
-form .title {
-    padding-left: 2vh;
+.movie .title {
+    flex: 1;
+    /* background-color: #6f0006; */
+    font-size: 2.5vh;
+    margin: 0 1vh;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
 }

@@ -24,7 +24,7 @@ function App() {
           <Route path='/details/:id'    Component={  Movie  }/>
           <Route path='/signin' Component={ SignIn } />
           <Route path='/signup' Component={ SignUp } />
-          <Route path='/add' element={ isExpired(localStorage.getItem('token')) ? <Navigate replace to='/' /> : <AddMovie/> } />
+          <Route path='/add' element={ isExpired(localStorage.getItem('token')) ? <Navigate replace to='/signin' /> : <AddMovie/> } />
           <Route path='*' Component={ NotFound } />
         </Routes>
       <Footer />

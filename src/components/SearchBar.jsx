@@ -21,7 +21,7 @@ export const SearchBar = () => {
             return false;
         }
 
-        const matchingMovies = movies.filter(m => m.title.toLowerCase().includes(searchTerm)).slice(0, 8);
+        const matchingMovies = movies.filter(m => m.title.toLowerCase().includes(searchTerm)).slice(0, 7);
         setActiveSearch(matchingMovies);
     }
 
