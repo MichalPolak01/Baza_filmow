@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Content } from "../Content/Content";
-import { movies } from "../../data";
+// import { movies } from "../../data";
 import { Home } from "./Home";
 
 

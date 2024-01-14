@@ -27,7 +27,6 @@ header a {
     transition: 1s;
 }
 
-
 header ul a:hover {
     color: red;
 }

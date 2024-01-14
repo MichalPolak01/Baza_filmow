@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 
-import Navbar from './components/Navbar';
+import { Navbar } from './components/Navbar';
 import { HomePage } from './pages/HomePage/HomePage';
 import { Movie } from './pages/SingleMovie/Movie';
 import { AddMovie } from './pages/AddMovie';

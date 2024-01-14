@@ -18,7 +18,7 @@
   width: 100%;
   height: 100vh;
   z-index: -1;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 20, 0.4) 50%, rgba(83, 100, 140, 0) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 20, 0.5) 50%, rgba(83, 100, 140, 0.1) 100%);
 }
 
 .singleMovie .img img {
@@ -77,4 +77,42 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.deleteContainer {
+  /* background-color: #1ae508; */
+  position: absolute;
+  top: 20vh;
+  right: 14vh;
+  /* height: 10svh; */
+  /* width: 10vh; */
+}
+
+.deleteContainer i {
+  width: 90%;
+  height: 90%;
+  font-size: 10vh;
+  color: #e50813;
+  transition: 1s;
+}
+
+.deleteContainer i:hover {
+  color: #c4050f;
+  transform: scale(1.5) rotate(-360deg);
+  /* box-shadow: 0.3vh 0.3vh 0.3vh 0.3vh rgba(255, 0, 0, 0.4); */
+  /* color: #e50813; */
+}
+
+.deleteAlert {
+  top: 0;
+  left: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  /* height: 90vh; */
+  width: 100%;
+  position:inherit;
+  z-index: -1;
 }
