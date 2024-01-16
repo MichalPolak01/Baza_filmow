@@ -15,12 +15,15 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="box">
+                <div>
                     <h3>Śleź nas:</h3>
-                    <Link to="https://www.facebook.com"><i className="fab fa-facebook-f"></i></Link>
-                    <Link to="https://www.instagram.com"><i className="fab fa-instagram"></i></Link>
-                    <Link to="https://www.youtube.com"><i className="fab fa-youtube"></i></Link>
-                    <Link to="https://www.twitter.com"><i className="fab fa-x-twitter"></i></Link>
+                    <div className="box">
+                        <Link to="https://www.facebook.com"><i className="fab fa-facebook-f"></i></Link>
+                        <Link to="https://www.instagram.com"><i className="fab fa-instagram"></i></Link>
+                        <Link to="https://www.youtube.com"><i className="fab fa-youtube"></i></Link>
+                        <Link to="https://www.twitter.com"><i className="fab fa-x-twitter"></i></Link>
+                    </div>
+
                 </div>
             </div>
         </footer>

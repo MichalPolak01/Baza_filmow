@@ -26,6 +26,26 @@ export const Navbar = () => {
                         <CustomLink to={'/'}>Home</CustomLink>
                         {/* <CustomLink to={'/movies'}>Filmy</CustomLink> */}
                         <CustomLink to={'/add'}>Dodaj film</CustomLink>
+                        {/* <CustomLink to={'/signin'} className=' toggleLogin signin'>
+                                <i className='fa fa-user'></i>
+                                <i className="fa-solid fa-user-tie"></i>
+                                    Zaloguj
+                        </CustomLink> */}
+                        {isNotLogged &&
+                            <CustomLink to={'/signin'} className='toggleLogin signin'>
+                                {/* <i className='fa fa-user'></i> */}
+                                <i className="fa-solid fa-user-tie"></i>
+                                    Zaloguj
+                            </CustomLink>
+                        }
+                        {!isNotLogged &&
+                            <li>
+                                <a href='/' className='toggleLogin signin' onClick={() => localStorage.removeItem('token')}>
+                                    <i className="fa-solid fa-user-slash"></i>
+                                    Wyloguj
+                                </a>
+                            </li>
+                        }
                     </ul>
                     <button className='toggle' onClick = {() => setMobile(!Mobile)}>
                         {Mobile ?  <i className='fa fa-times'></i> : <i className='fa fa-bars'></i>}
@@ -33,7 +53,7 @@ export const Navbar = () => {
                 </nav>
                 <div className='account flexSB'>
                     <SearchBar />
-                    <ul>
+                    <ul className='logginAccount'>
                         {isNotLogged &&
                             <CustomLink to={'/signin'} className='signin'>
                                 {/* <i className='fa fa-user'></i> */}

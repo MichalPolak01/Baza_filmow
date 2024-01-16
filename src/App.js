@@ -15,6 +15,9 @@ import { SignUp } from './pages/Login-SignUp/SignUp';
 import { NotFound } from './components/NotFound';
 
 function App() {
+  const token = localStorage.getItem('token');
+  const isNotLogged = token ? isExpired(token) : true;
+
   return (
     <>
       <Navbar />
@@ -24,7 +27,7 @@ function App() {
           <Route path='/details/:id'    Component={  Movie  }/>
           <Route path='/signin' Component={ SignIn } />
           <Route path='/signup' Component={ SignUp } />
-          <Route path='/add' element={ isExpired(localStorage.getItem('token')) ? <Navigate replace to='/signin' /> : <AddMovie/> } />
+          <Route path='/add' element={ isNotLogged ? <Navigate replace to='/signin' /> : <AddMovie/> } />
           <Route path='*' Component={ NotFound } />
         </Routes>
       <Footer />

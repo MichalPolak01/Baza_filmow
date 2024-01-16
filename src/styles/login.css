@@ -11,7 +11,7 @@
     z-index: -2;
   }
 
-  .login::after {
+.login::after {
     content: "";
     position: absolute;
     top: 0;
@@ -22,7 +22,7 @@
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 20, 0.4) 50%, rgba(83, 100, 140, 0) 100%);
   }
   
-  .login .img img {
+.login .img img {
     position: absolute;
     top: 0;
     left: 0;
@@ -180,3 +180,10 @@
     background-color: #f8d7da;
     border-color: #f5c6cb;
   }
+
+  @media only screen and (max-width: 1281px) {
+    .login .form {
+        width: 70vh;
+    }
+  }
+  

@@ -25,7 +25,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     height: 12vh;
     padding-top: 3vh;
     gap: 1vh;
@@ -35,6 +36,7 @@
     color: #b50d00;
     font-size: 5vh;
     font-weight: 800;
+    text-align: center;
 }
 
 .addFilm .underline {
@@ -130,3 +132,43 @@
     transform: scale(1.1);
     background: #b50d00;
 }
+
+@media only screen and (max-width: 1509px) {
+    .addFilm .text {
+        font-size: 4.5vh;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .addFilm .text {
+        font-size: 4vh;
+    }
+}
+
+@media only screen and (max-width: 1208px) {
+    .addFilm .text {
+        font-size: 3vh;
+    }
+
+    .addFilm .submit {
+        width: 45vh;
+        height: 7vh;
+        font-size: 3vh;
+    }
+}
+  
+  @media only screen and (max-width: 710px) {
+    .addFilm .text {
+        font-size: 2.5vh;
+    }
+  
+    .MovieBox h4 {
+      font-size: 1.5vh; 
+    }
+
+    .addFilm .submit {
+        width: 40vh;
+        height: 6vh;
+        font-size: 2.5vh;
+    }
+  }

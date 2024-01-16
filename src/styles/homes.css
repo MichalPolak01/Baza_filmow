@@ -7,10 +7,6 @@
     color: #fff;
 }
 
-/* .homeContainer {
-    position: inherit;
-} */
-
 .coverImage {
     position: absolute;
     top: 0;
@@ -30,13 +26,20 @@
 }
 
 .homeContainer .texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center;
+    align-content: center; */
+    
+    margin-left: 5%;
     position: absolute;
-    top: 0;
-    width: 100%;
-    height: 50vh;
-    padding-top: 20vh;
+    top: 10;
+    width: 90%;
+    height: 40vh;
+    /* padding-top: 20vh;
     padding-left: 10vh;
-    padding-right: 10vh;
+    padding-right: 10vh; */
 }
 
 .homeContainer h1 {
@@ -95,4 +98,52 @@
     color: #fff;
     font-weight: 800;
     transform: scale(1.1);
+  }
+
+  @media only screen and (max-width: 1281px) {
+    .sort h1 {
+      font-size: 3vh;
+    }
+  
+    .sort h2 {
+      font-size: 1.8vh; 
+    }
+
+    .homeContainer h1 {
+        font-size: 7vh;
+    }
+    
+    .homeContainer h2 {
+        font-size: 3.5vh;
+    }
+  }
+  
+  @media only screen and (max-width: 818px) {
+    .sort h1 {
+        font-size: 2.5vh;
+    }
+    
+    .sort h2 {
+    font-size: 1.5vh; 
+    }
+
+    .homeContainer h1 {
+        font-size: 6vh;
+    }
+    
+    .homeContainer h2 {
+        font-size: 3vh;
+    }
+
+    .home {
+        height: 45vh;
+    }
+    
+    .coverImage::after {
+        height: 55vh;
+    }
+    
+    .coverImage img {
+        height: 55vh;
+    }
   }

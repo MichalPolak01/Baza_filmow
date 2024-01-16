@@ -60,6 +60,7 @@
 
 .singleMovie .text p {
   text-align: justify;
+  font-size: 16px;
 }
 
 .singleMovie .icon {
@@ -77,15 +78,17 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: 2s;
+}
+
+.singleMovie .icon img:hover {
+  transform: scale(1.1) skew(-5deg);
 }
 
 .deleteContainer {
-  /* background-color: #1ae508; */
   position: absolute;
   top: 20vh;
   right: 14vh;
-  /* height: 10svh; */
-  /* width: 10vh; */
 }
 
 .deleteContainer i {
@@ -94,16 +97,41 @@
   font-size: 10vh;
   color: #e50813;
   transition: 1s;
+  animation: wiggle 2s linear infinite;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
 }
 
 .deleteContainer i:hover {
-  color: #c4050f;
-  transform: scale(1.5) rotate(-360deg);
-  /* box-shadow: 0.3vh 0.3vh 0.3vh 0.3vh rgba(255, 0, 0, 0.4); */
-  /* color: #e50813; */
+  color: #bb111a;
+  transform: scale(1.5);
 }
 
 .deleteAlert {
+  position: fixed;
   top: 0;
   left: 0;
   color: #fff;
@@ -111,8 +139,62 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-  /* height: 90vh; */
   width: 100%;
-  position:inherit;
-  z-index: -1;
+  z-index: 1;
+  animation: fadeIn 1s ease-out;
+  animation-delay: 0s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 1281px) {
+  .singleMovie .icon {
+    margin: 3vh;
+    width: 30vh;
+    height: 45vh;
+  }
+
+  .singleMovie .text {
+    flex: 1;
+    margin-left: 3vh;
+    margin-bottom: 1vh;
+    margin-right: 3vh;
+  }
+
+  .singleMovie h1 {
+    margin-bottom: 1vh;
+    font-size: 72px;
+  }
+  
+  .singleMovie h4 {
+    font-size: 20px;
+    margin-bottom: 3vh;
+  }
+
+  .singleMovie .text p {
+    font-size: 15px;
+  }
+
+  .singleMovie {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+@media only screen and (max-width: 950px) {
+  .deleteContainer {
+    top: 20vh;
+    right: 10vh;
+  }
 }

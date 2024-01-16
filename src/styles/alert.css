@@ -64,3 +64,51 @@
     transform: scale(1.1);
     background: #b50d00;
 }
+
+@media only screen and (max-width: 1370px) {
+    .deleteConfirmation .content {
+        width: 100vh; 
+        padding: 7vh 5vh;
+        gap: 10vh;
+    }
+
+    .deleteConfirmation .button {
+        width: 40vh;
+    }
+  
+    .deleteConfirmation .underline {
+        width: 50vh;
+    }
+}
+
+  @media only screen and (max-width: 1050px) {
+    .deleteConfirmation .content {
+        width: 80vh; 
+        padding: 7vh 5vh;
+        gap: 10vh;
+    }
+
+    .deleteConfirmation .button {
+        width: 32vh;
+    }
+  
+    .deleteConfirmation .underline {
+        width: 40vh;
+    }
+  }
+
+  @media only screen and (max-width: 820px) {
+    .deleteConfirmation .content {
+        width: 60vh; 
+        padding: 7vh 5vh;
+        gap: 10vh;
+    }
+
+    .deleteConfirmation .button {
+        width: 24vh;
+    }
+  
+    .deleteConfirmation .underline {
+        width: 30vh;
+    }
+  }

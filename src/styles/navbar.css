@@ -77,34 +77,71 @@ form div {
     flex-direction: column;
   }
 
+  .navMenu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
 .toggle {
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
+.toggleLogin {
+    display: none;
+}
+
+@media only screen and (max-width: 1140px) {
     header nav .flexSB {
         display: none;
     }
 
-    .account {
+    .toggleLogin {
+        display: block;
+    }
+
+    header .flexSB {
+        justify-content: center;
+    }
+
+    header form {
+        margin-right: 68px
+    }
+
+    .logginAccount {
         display: none;
+    }
+
+    .account {
+        flex: 1;
+    }
+
+    header button {
+        margin: auto;
+        padding: 0;
+        border: none;
+        font: inherit;
+        outline: none;
     }
 
     .navMenu-list {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         position: absolute;
         top: 0;
         left: 0;
-        background-color: red;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
         width: 50%;
         height: 100vh;
         z-index: 999;
     }
 
-    .navMenu-list a {
-        color: #323232;
-    }
+    /* .navMenu-list .signin {
+        justify-self: flex-end;
+    } */
 
     header ul li {
         margin-top: 30px;
@@ -112,15 +149,27 @@ form div {
     }
 
     .toggle {
+        flex: 1;
+        line-height: 7vh;
         display: block;
         position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 20px;
+        right: 5%;
         margin: auto;
         cursor: pointer;
         background: none;
 
+    }
+
+    .toggle i {
+        color: #fff;
+        font-size: 2.5vh;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    .account {
+        display: none;
     }
 }
 

@@ -25,7 +25,7 @@
   border-radius: 5vh;
   cursor: pointer;
   border-left: #e50813;
-  transform: scale3d(1.1, 1.1, 1) translate3d(6%, 0, 0) perspective(31.25em);
+  transform: scale3d(1.1, 1.1, 1) translate3d(5%, 1%, 0) perspective(31.25em);
   box-shadow: 0.5vh 0.5vh 0vh 0vh rgba(255, 0, 0, 0.4);
 }
 
@@ -54,6 +54,7 @@
 
 .MovieBox .text {
   padding: 30px 0;
+  padding-right: 5%;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -63,9 +64,13 @@
 .MovieBox h3 {
   flex: 1;
   color: #e50813;
-  font-size: 70px;
+  font-size: 8vh;
   text-transform: uppercase;
   font-weight: 800;
+}
+
+.MovieBox h4 {
+  font-size: 1.7vh; 
 }
 
 .MovieBox .icon {
@@ -87,4 +92,24 @@
 
 .MovieBox .text span {
   color: #1ae508;
+}
+
+@media only screen and (max-width: 1281px) {
+  .MovieBox h3 {
+    font-size: 5vh;
+  }
+
+  .MovieBox h4 {
+    font-size: 1.6vh; 
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .MovieBox h3 {
+    font-size: 4vh;
+  }
+
+  .MovieBox h4 {
+    font-size: 1.5vh; 
+  }
 }

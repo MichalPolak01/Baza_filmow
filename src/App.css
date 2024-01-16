@@ -19,7 +19,22 @@ ul {
 
 .flexSB {
   display: flex;
+  /* flex: 1; */
   justify-content: space-between;
+  align-items: center;
+}
+
+.flexS {
+  display: flex;
+  /* flex: 1; */
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flexS {
+  display: flex;
+  /* flex: 1; */
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -39,14 +54,3 @@ ul {
 .absolute {
   position: absolute;
 }
-
-/* button {
-  background-color: red;
-  outline: none;
-  border: none;
-  color: #fff;
-  padding: 12px 40px;
-  font-weight: 500;
-  font-size: 17px;
-  cursor: pointer;
-} */
