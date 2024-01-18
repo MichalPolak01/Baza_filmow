@@ -53,8 +53,9 @@
     height: 7vh;
     color: #fff;
     background: #820900;
+    font-family: 'Courier New', Courier, monospace;
     border-radius: 50px;
-    font-size: 2vh;
+    font-size: 2.5vh;
     text-align: center;
     font-weight: 800;
     cursor: pointer;

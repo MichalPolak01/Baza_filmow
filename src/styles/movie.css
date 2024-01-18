@@ -127,6 +127,7 @@
 }
 
 .deleteContainer i:hover {
+  cursor: pointer;
   color: #bb111a;
   transform: scale(1.5);
 }

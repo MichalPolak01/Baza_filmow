@@ -54,10 +54,12 @@
     color: #fff;
     background: #820900;
     border-radius: 50px;
-    font-size: 2vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3vh;
     text-align: center;
     font-weight: 800;
     cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
     transition: 500ms;
 }
 
