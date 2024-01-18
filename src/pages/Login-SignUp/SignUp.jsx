@@ -6,6 +6,7 @@ import password_icon from './FormIcons/password.png';
 import { movies } from '../../data';
 import '../../styles/login.css';
 import axios from 'axios';
+import { AlertConfirm } from '../../components/AlertConfirm'
 
 export const SignUp = () => {
     const [account, setAccount] = useState({
@@ -15,6 +16,7 @@ export const SignUp = () => {
     });
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
+    const [showAlert, setShowAlert] = useState(false);
 
     const validate = () => {
         const newErrors = {};
@@ -61,7 +63,7 @@ export const SignUp = () => {
             })
             .catch((error) => {
                 const errorObject = {};
-                errorObject.name = 'Podany login jest zajęty!';
+                setShowAlert(true);
                 setErrors(errorObject);
                 console.log(error);
             });
@@ -78,6 +80,10 @@ export const SignUp = () => {
     const handleChangeRoute = () => {
         navigate('/signin');
         window.location.reload();
+    };
+
+    const handleShowAlert = () => {
+        setShowAlert(false);
     };
 
     const latestMovie = movies.sort((a, b) =>
@@ -125,6 +131,11 @@ export const SignUp = () => {
                     </div>
                 </div>
             </section>
+            {showAlert && (
+                <div className='confirmAlert'>
+                    <AlertConfirm onConfirm={handleShowAlert} text='Podany login jest zajęty!'/>
+                </div>
+            )}
         </>
     );
 };

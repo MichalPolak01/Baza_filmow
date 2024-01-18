@@ -181,6 +181,22 @@
     border-color: #f5c6cb;
   }
 
+  .confirmAlert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+    animation: fadeIn 1s ease-out;
+    animation-delay: 0s;
+  }
+
+  /* Responsive */
   @media only screen and (max-width: 1281px) {
     .login .form {
         width: 70vh;

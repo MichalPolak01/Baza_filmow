@@ -23,7 +23,6 @@ export const AddMovie = () => {
         productionYear: ''
     });
     const [errors, setErrors] = useState({});
-    // const navigate = useNavigate();
 
     const validate = () => {
         const newErrors = {};
@@ -143,12 +142,6 @@ export const AddMovie = () => {
                                     <textarea value={movie.content} onChange={handleChange} type='text' id='content' aria-describedby='emailHelp' placeholder='Opis' />
                                     {errors.content && <div className='alert alert-danger'>{errors.content}</div>}
                                 </div>
-                                {/* <div className='input'>
-                                    <input type='text' placeholder='Aktorzy' />
-                                </div>
-                                <div className='input'>
-                                    <input type='text' placeholder='Reżyser' />
-                                </div> */}
                                 <div className='input'>
                                     <input value={movie.genre} onChange={handleChange} type='text' id='genre' aria-describedby='emailHelp' placeholder='Gatunek' />
                                     {errors.genre && <div className='alert alert-danger'>{errors.genre}</div>}
@@ -171,11 +164,9 @@ export const AddMovie = () => {
                                 <button type='submit' className='submit'>Dodaj film</button>
                             </div>
                         </form>
-
                     </div>
                 </section>
             </div>
-            
         </>
     )
 }

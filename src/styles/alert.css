@@ -1,3 +1,4 @@
+/* Content */
 .deleteConfirmation {
     flex: 1;
     height: 30vh;
@@ -65,6 +66,7 @@
     background: #b50d00;
 }
 
+/* Responsive */
 @media only screen and (max-width: 1370px) {
     .deleteConfirmation .content {
         width: 100vh; 

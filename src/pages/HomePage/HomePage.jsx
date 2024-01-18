@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Content } from "../Content/Content";
-// import { movies } from "../../data";
 import { Home } from "./Home";
 
 
 export const HomePage = () => {
-  // const [items, setItem] = useState(movies)
   const [items, setItems] = useState([])
   const [title, setTitle] = useState('')
   const [sortingFilms, setSortingFilms] = useState('')
@@ -18,7 +16,6 @@ export const HomePage = () => {
   };
     
   const sortByDate = () => {
-      // const sortedItems = [...items].sort((a, b) => new Date(b.date.replace(/(\d{2}).(\d{2}).(\d{4})/, '$3-$2-$1')) - new Date(a.date.replace(/(\d{2}).(\d{2}).(\d{4})/, '$3-$2-$1')));
       const sortedItems = [...items].sort((a, b) => parseFloat(b.productionYear) - parseFloat(a.productionYear));
       setItems(sortedItems);
       setTitle('Najowsze publikacje');
@@ -38,7 +35,6 @@ export const HomePage = () => {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        // setItems(data);
         const sortedItems = [...data].sort((a, b) => parseFloat(b.rate) - parseFloat(a.rate));
         setItems(sortedItems);
         setTitle('Najwyżej oceniane');

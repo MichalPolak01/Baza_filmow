@@ -87,6 +87,7 @@
     background: #004e8a
 }
 
+/* Responsive */
 @media only screen and (max-width: 1350px) {
     .notFound .content {
         width: 100vh;

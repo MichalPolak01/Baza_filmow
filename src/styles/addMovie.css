@@ -133,6 +133,7 @@
     background: #b50d00;
 }
 
+/* Responsive */
 @media only screen and (max-width: 1509px) {
     .addFilm .text {
         font-size: 4.5vh;

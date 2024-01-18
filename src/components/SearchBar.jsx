@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react'
-// import { movies } from '../data'
 import { Link } from 'react-router-dom'
 
 export const SearchBar = () => {
@@ -21,7 +20,6 @@ export const SearchBar = () => {
             return false;
         }
 
-        // const matchingMovies = movies.filter(m => m.title.toLowerCase().includes(searchTerm)).slice(0, 7);
         const matchingMovies = movies.filter(m => m && m.title && m.title.toLowerCase().includes(searchTerm)).slice(0, 7);
 
         setActiveSearch(matchingMovies);

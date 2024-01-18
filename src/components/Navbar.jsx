@@ -10,7 +10,6 @@ export const Navbar = () => {
     const [Mobile, setMobile] = useState(false);
 
     const token = localStorage.getItem('token');
-    // const user = token ? decodeToken(token) : null;
     const isNotLogged = token ? isExpired(token) : true;
     
     return (
@@ -24,16 +23,9 @@ export const Navbar = () => {
                     </div>
                     <ul className={Mobile ? "navMenu-list" : "flexSB"} onClick = {() => setMobile(false)}>
                         <CustomLink to={'/'}>Home</CustomLink>
-                        {/* <CustomLink to={'/movies'}>Filmy</CustomLink> */}
                         <CustomLink to={'/add'}>Dodaj film</CustomLink>
-                        {/* <CustomLink to={'/signin'} className=' toggleLogin signin'>
-                                <i className='fa fa-user'></i>
-                                <i className="fa-solid fa-user-tie"></i>
-                                    Zaloguj
-                        </CustomLink> */}
                         {isNotLogged &&
                             <CustomLink to={'/signin'} className='toggleLogin signin'>
-                                {/* <i className='fa fa-user'></i> */}
                                 <i className="fa-solid fa-user-tie"></i>
                                     Zaloguj
                             </CustomLink>
@@ -56,7 +48,6 @@ export const Navbar = () => {
                     <ul className='logginAccount'>
                         {isNotLogged &&
                             <CustomLink to={'/signin'} className='signin'>
-                                {/* <i className='fa fa-user'></i> */}
                                 <i className="fa-solid fa-user-tie"></i>
                                     Zaloguj
                             </CustomLink>

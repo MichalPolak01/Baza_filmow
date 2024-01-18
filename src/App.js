@@ -1,6 +1,5 @@
 import './App.css';
 import { isExpired } from "react-jwt";
-// import Movies from "./pages/Movies";
 import Footer from './components/Footer';
 
 import { Navigate, Route, Routes } from 'react-router-dom';
@@ -23,7 +22,6 @@ function App() {
       <Navbar />
         <Routes>
           <Route path='/' exact Component={ HomePage } />
-          {/* <Route path='/movies' Component={ Movies } /> */}
           <Route path='/details/:id'    Component={  Movie  }/>
           <Route path='/signin' Component={ SignIn } />
           <Route path='/signup' Component={ SignUp } />

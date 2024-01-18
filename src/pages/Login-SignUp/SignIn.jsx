@@ -5,6 +5,7 @@ import passwordIcon from './FormIcons/password.png';
 import { movies } from '../../data';
 import '../../styles/login.css';
 import axios from 'axios';
+import { AlertConfirm } from '../../components/AlertConfirm'
 
 export const SignIn = () => {
     const [account, setAccount] = useState({
@@ -13,6 +14,7 @@ export const SignIn = () => {
     });
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
+    const [showAlert, setShowAlert] = useState(false);
 
     const validate = () => {
         const newErrors = {};
@@ -47,7 +49,7 @@ export const SignIn = () => {
         })
         .catch((error) => {
             const errorObject = {};
-            errorObject.password = 'Podany login lub hasło są niepoprawne!';
+            setShowAlert(true);
             console.log(error);
             setErrors(errorObject);
         });
@@ -64,6 +66,10 @@ export const SignIn = () => {
     const handleChangeRoute = () => {
         navigate('/');
         window.location.reload();
+    };
+
+    const handleShowAlert = () => {
+        setShowAlert(false);
     };
 
     const latestMovie = movies.sort((a, b) =>
@@ -122,6 +128,11 @@ export const SignIn = () => {
                     </div>
                 </div>
             </section>
+            {showAlert && (
+                <div className='confirmAlert'>
+                    <AlertConfirm onConfirm={handleShowAlert} text='Podany login lub hasło są niepoprawne!'/>
+                </div>
+            )}
         </>
     );
 };

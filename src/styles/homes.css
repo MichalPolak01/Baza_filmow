@@ -1,3 +1,4 @@
+/* Content */
 .home {
     position: inherit;
     top: 0;
@@ -28,18 +29,12 @@
 .homeContainer .texts {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* align-items: center;
-    align-content: center; */
-    
+    justify-content: center;  
     margin-left: 5%;
     position: absolute;
     top: 10;
     width: 90%;
     height: 40vh;
-    /* padding-top: 20vh;
-    padding-left: 10vh;
-    padding-right: 10vh; */
 }
 
 .homeContainer h1 {
@@ -100,6 +95,7 @@
     transform: scale(1.1);
   }
 
+  /* Responsive */
   @media only screen and (max-width: 1281px) {
     .sort h1 {
       font-size: 3vh;
