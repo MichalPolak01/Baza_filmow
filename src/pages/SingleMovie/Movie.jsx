@@ -80,34 +80,42 @@ export const Movie = () => {
     return <> {item ? (
         <>
             <section className='singleMovie'>
-                <div className="img">
-                    <img src={item.backgroundImage !== '' ? item.backgroundImage : basicBackground} alt="" />
-                </div>
-                <div className='icon'>
-                    <img src={item.image} alt="" />
-                </div>
-                <div className='text'>
-                    <h1>{item.title}</h1>
-                    <h4>Średnia ocen: {item.rate}/10</h4>
-                    <p><span>Opis:</span> <i>{item.content}</i></p>
-                    <p><span>Gatunek:</span> {item.genre}</p>
-                    <p><span>Data wydania:</span> {item.productionYear}</p>
-                </div>
-                <div className='deleteContainer' onClick={handleDeleteClick}>
-                  <i className="fa fa-trash-can"></i>
-                </div>
+              <div className="img">
+                <img src={item.backgroundImage}
+                  onError={({currentTarget}) => {
+                    currentTarget.src = basicBackground
+                    currentTarget.onerror = null
+                  }} alt="" />
+              </div>          
+              <div className='icon'>
+                  <img src={item.image} alt=""     
+                    onError={({currentTarget}) => {
+                      currentTarget.src = basicBackground
+                      currentTarget.onerror = null
+                    }} />
+              </div>
+              <div className='text'>
+                  <h1>{item.title}</h1>
+                  <h4>Średnia ocen: {item.rate}/10</h4>
+                  <p><span>Opis:</span> <i>{item.content}</i></p>
+                  <p><span>Gatunek:</span> {item.genre}</p>
+                  <p><span>Data wydania:</span> {item.productionYear}</p>
+              </div>
+              <div className='deleteContainer' onClick={handleDeleteClick}>
+                <i className="fa fa-trash-can"></i>
+              </div>
             </section>
 
             {isDeleteAlertOpen && (
               <div className='deleteAlert'>
                 <DeleteMovieAlert onClose={handleDeleteCancel} onConfirm={handleDeleteConfirm} />
               </div>
-          )}
-          {isLoggedAlert && (
+            )}
+            {isLoggedAlert && (
               <div className='deleteAlert'>
                 <AlertNotLogged onClose={handleDeleteCancel} onConfirm={handleDeleteConfirm} />
               </div>
-          )}
+            )}
         </>
     ) : null }</>
 }

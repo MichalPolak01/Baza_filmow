@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import basicBackground from '../pages/Content/BasicBackgrounds/questionMarks.jpg'
 
 export const SearchBar = () => {
     const [activeSearch, setActiveSearch] = useState([]);
@@ -81,8 +82,15 @@ export const SearchBar = () => {
                     { activeSearch.map(movie => (
                         <Link key={movie.id} to={`details/${movie.id}`} onClick={handleResultClick}>
                             <div className='movie'>
-                                <div className='icon'>
+                                {/* <div className='icon'>
                                     <img src={movie.image} alt="" />
+                                </div> */}
+                                <div className='icon'>
+                                    <img src={movie.image} alt=""     
+                                    onError={({currentTarget}) => {
+                                        currentTarget.src = basicBackground
+                                        currentTarget.onerror = null
+                                    }} />
                                 </div>
                                 <div className='title'>
                                     <span key={movie.id}>{movie.title}</span>

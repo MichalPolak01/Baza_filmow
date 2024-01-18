@@ -83,12 +83,18 @@
 }
 
 .MovieBox .icon img {
-  border: burlywood 2px solid;
+  /* border: burlywood 2px solid; */
+  border: #6f0006 3px solid;
   border-radius: 5vh;
   position: absolute;
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: 1.5s;
+}
+
+.MovieBox:hover .icon img {
+  transform: scale(1.1) skew(-5deg);
 }
 
 .MovieBox .text span {

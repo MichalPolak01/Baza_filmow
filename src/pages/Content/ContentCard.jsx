@@ -7,10 +7,18 @@ export const ContentCard = ({item: {id, title, rate, content, actors, director,
     <>
       <div className="MovieBox">
         <div className="img">
-            <img src={backgroundImage !== '' ? backgroundImage : basicBackground} alt="" />
+            <img src={backgroundImage}
+              onError={({currentTarget}) => {
+                currentTarget.src = basicBackground
+                currentTarget.onerror = null
+              }} alt="" />
         </div>          
         <div className='icon'>
-            <img src={image} alt="" />
+            <img src={image} alt=""     
+              onError={({currentTarget}) => {
+                currentTarget.src = basicBackground
+                currentTarget.onerror = null
+              }} />
         </div>
         <div className='text'>
           <h3>{title}</h3>

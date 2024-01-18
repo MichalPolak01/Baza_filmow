@@ -131,9 +131,9 @@ form div {
 }
 
 .movie .icon img {
-    border: burlywood 2px solid;
+    /* border: burlywood 2px solid; */
+    border: #6f0006 2px solid;
     border-radius: 2vh;
-    /* height: 8vh; */
     height: 100%;
     width: 100%;
     position: absolute;
@@ -142,7 +142,6 @@ form div {
 
 .movie .title {
     flex: 1;
-    /* background-color: #6f0006; */
     font-size: 2.5vh;
     margin: 0 1vh;
     text-align: center;
